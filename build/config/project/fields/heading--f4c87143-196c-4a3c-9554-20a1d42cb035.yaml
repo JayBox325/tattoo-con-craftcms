@@ -1,0 +1,19 @@
+columnSuffix: sikbfagu
+contentColumnType: text
+fieldGroup: d9cf0b4b-81e5-47e7-afd6-04017176df56 # Standard Content
+handle: heading
+instructions: 'If you want to overwrite the page title at the top of the page.'
+name: Heading
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

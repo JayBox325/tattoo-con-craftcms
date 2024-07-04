@@ -1,0 +1,11 @@
+{% extends "layout/_index" %}
+
+{% block content %}
+
+    {% include 'components/hero-page' with {
+        title: 'News'
+    } %}
+
+    {% include 'components/listing-news' %}
+    
+{% endblock content %}

@@ -1,0 +1,12 @@
+field: d1d5ea8e-022b-4110-83d7-d06c0c3829ea # Page Components
+fieldLayouts:
+  7a3af137-5a60-4010-b84a-6c06a083e4c0:
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: 71cb548b-cf6a-45e0-b099-4e92de30b0e5
+        userCondition: null
+handle: ticker
+name: Ticker
+sortOrder: 8

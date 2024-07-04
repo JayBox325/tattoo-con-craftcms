@@ -1,0 +1,25 @@
+{# subject: Bristol Tattoo Convention 2024 Application Received #}
+{# fromEmail: {{ craft.app.projectConfig.get('email.fromEmail') }} #}
+{# fromName: {{ craft.app.projectConfig.get('email.fromName') }} #}
+{# replyToName: {{ craft.app.projectConfig.get('email.fromName') }} #}
+{# replyToEmail: {{ craft.app.projectConfig.get('email.fromEmail') }} #}
+{# cc:  #}
+{# bcc:  #}
+{# includeAttachments: false #}
+{# presetAssets:  #}
+{# templateName: Application Confirmation #}
+{# description: Template for a new application, confirming it's received. #}
+
+<h2>Thank you for your application</h2>
+
+<p>Submitted on: {{ dateCreated|date('l, F j, Y \\a\\t g:ia') }}</p>
+<ul>
+    {% for field in allFields %}
+        <li>{{ field.label }}: {{ field.valueAsString }}</li>
+    {% endfor %}
+</ul>
+
+<p>We will reach out in January to notify you of the status of your application.</p>
+
+
+

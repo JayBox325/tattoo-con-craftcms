@@ -1,0 +1,19 @@
+<section class="row py-8 md:py-12 lg:px-12 lg:py-16 xl:py-20 2xl:py-28">
+    <div class="container max-w-5xl mx-auto">
+
+        {% if heading %}
+            <h2 class="mb-6 md:mb-8 lg:mb-10">{{ heading }}</h2>
+        {% endif %}
+
+        <div class="w-content">
+            {{ body }}
+        </div>
+
+        {% if button.url %}
+            <div class=" mt-6 md:mt-8 lg:mt-10">
+                <a href="{{ button.url }}" {% if button.target == "_blank" %}target="_blank" rel="noopener noreferrer"{% endif %} class="btn">{{ button.text }}</a>
+            </div>
+        {% endif %}
+        
+    </div>
+</section>

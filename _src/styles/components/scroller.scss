@@ -1,0 +1,30 @@
+@for $i from 1 through 30 {
+    [data-scroller='#{$i}'] {
+        grid-template-columns: repeat($i, calc(70vw));
+
+        @screen sm {
+            grid-template-columns: repeat($i, calc(76vw - 3rem));
+        }
+        @screen md {
+            grid-template-columns: repeat($i, calc(54vw - 3rem));
+        }
+        @screen lg {
+            grid-template-columns: repeat($i, calc(37vw - 3rem));
+        }
+        @screen xl {
+            grid-template-columns: repeat($i, calc(32vw - 4vw));
+        }
+        @screen 2xl {
+            grid-template-columns: repeat($i, calc(25vw - 4vw));
+        }
+    }
+}
+
+.scroller {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

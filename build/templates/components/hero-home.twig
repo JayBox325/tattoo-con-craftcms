@@ -1,0 +1,76 @@
+{% set image = entry.homepageBackgroundImage.one() %}
+{% set poster = conventionDetails.posterImage.one() %}
+{% set logo = conventionDetails.eventLogo.one() %}
+
+<section class="row">
+
+    <div class="h-[calc(100vh-13.5rem)] md:h-[calc(100vh-14.5rem)] relative">
+
+        <picture>
+            <source {{ attr({
+                type: 'image/png',
+                srcset: logo.getSrcset(
+                    [320, 412, 768],
+                    { format: 'webp', }
+                ),
+                sizes: '50vw',
+            }) }}>
+            <img width="{{ logo.width }}" height="{{ logo.height }}" alt="{{ logo.alt }}" class="z-20 drop-shadow-xl w-9/12 max-w-xs lg:max-w-sm 2xl:max-w-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </picture>
+
+        <h1 class="sr-only">{{ conventionDetails.heading }}</h1>
+
+        <div class="absolute z-10 top-0 left-0 w-full h-full">
+            <picture>
+                <source {{ attr({
+                    type: 'image/jpeg',
+                    srcset: image.getSrcset(
+                        [320, 412, 768, 1280, 1920],
+                        { format: 'webp', }
+                    ),
+                    sizes: '100vw',
+                }) }}>
+                <img width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}" class="object-cover w-full h-full opacity-20">
+            </picture>
+        </div>
+    </div>
+    
+    <div class="border-t-4 border-[var(--primary)] uppercase font-display leading-none text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl text-[var(--primary)] text-center flex flex-row items-center divide-x-4 divide-[var(--primary)]">
+        <div class="flex-auto px-4 h-20 flex items-center justify-center 2xl:w-1/2">
+            <p>{{ conventionDetails.venueTitle }}</p>
+        </div>
+        <div class="flex-auto px-4 h-20 flex items-center justify-center 2xl:w-1/2">
+            <p>{{ conventionDetails.dates }}</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="row">
+
+    <div class="xl:flex xl:flex-row relative xl:h-[200vh] xl:min-h-[900px] js-container">
+        <div class="overflow-hidden p-6 pb-0 md:pb-0 md:p-16 xl:p-8 w-full flex items-center justify-center z-10 js-left xl:sticky xl:top-28 xl:w-[60%] xl:h-[calc(100vh-9rem)]">
+            <p class="js-title font-condensed text-[var(--primary)] text-[15vw] xl:text-[15vh] 2xl:text-[17vh] leading-[0.9] text-center uppercase">
+
+                {{ entry.bigIntroductionText|nl2br|replace({'~': '<span class="js-poster-illustration hidden md:inline-block w-16 h-12 md:h-20 lg:h-28 relative">
+                    <img src="/assets/images/rose.png" alt="" class="w-[165%] md:w-[200%] lg:w-[250%] max-w-[250%] block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+                </span>'})|raw }}
+            </p>
+        </div>
+        <div class="xl:absolute z-20 right-0 xl:h-full top-0 bottom-0 js-right xl:w-[34%]">
+            <div class="w-10/12 max-w-xl mx-auto xl:sticky xl:top-28 z-20 xl:h-[calc(100vh-9rem)] p-4 md:p-16 xl:p-12 xl:pl-0">
+                <picture>
+                    <source {{ attr({
+                        type: 'image/jpeg',
+                        srcset: poster.getSrcset(
+                            [320, 360, 412, 600, 768],
+                            { format: 'webp', }
+                        ),
+                        sizes: '80vw',
+                    }) }}>
+                    <img width="{{ poster.width }}" height="{{ poster.height }}" alt="{{ poster.alt }}" class="h-full object-contain w-full">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>

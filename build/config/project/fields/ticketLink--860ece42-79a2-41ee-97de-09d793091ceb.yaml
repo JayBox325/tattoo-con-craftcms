@@ -1,0 +1,14 @@
+columnSuffix: uesngcdu
+contentColumnType: string(255)
+fieldGroup: 7df0605f-0733-42a7-8d52-37b1daaf4616 # Common
+handle: ticketLink
+instructions: 'Paste the link for users to buy tickets here.'
+name: 'Ticket Link'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

@@ -1,0 +1,163 @@
+field: d1d5ea8e-022b-4110-83d7-d06c0c3829ea # Page Components
+fieldLayouts:
+  0ca16d59-c800-4cd8-ba5b-6aa56b97104b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: dd7dbb09-69d0-4cfe-abc6-6e5d37588fde # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1403dc53-fcc1-4eca-9b0c-468e6ae95903
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8d4c452f-09c8-4970-8120-aa0e52eb21a7 # Body
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fbbb296d-7b74-44fa-ab19-16612b17e397
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 948aaf6b-4564-40c5-8ae7-16feac4453a5 # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f5bd304-16da-487f-8354-5910e2ab01e7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b1eb6e6b-5e2c-4c7d-a9c0-3ba7f04f2017
+        userCondition: null
+fields:
+  8d4c452f-09c8-4970-8120-aa0e52eb21a7: # Body
+    columnSuffix: perrfebz
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Body
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  948aaf6b-4564-40c5-8ae7-16feac4453a5: # Button
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: button
+    instructions: null
+    name: Button
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: false
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: entry
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources:
+            - 'section:995d49ce-ef17-4772-a54d-f77351126722' # News
+            - 'section:d578307c-7dd7-4eaf-8b5f-b3b6623537f7' # Site
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  dd7dbb09-69d0-4cfe-abc6-6e5d37588fde: # Heading
+    columnSuffix: xaguyqjo
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: bodyText
+name: 'Body Text'
+sortOrder: 1

@@ -1,0 +1,14 @@
+* {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+    
+body {
+    @apply bg-black text-white;
+    overscroll-behavior-y: none;
+    overflow-x: hidden;
+    
+    &.is-hidden {
+        @apply overflow-hidden;
+    }
+}

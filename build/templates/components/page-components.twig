@@ -1,0 +1,57 @@
+{% for block in components %}
+
+    {% switch block.type %}
+
+        {% case "ticker" %}
+            {% include 'components/ticker' %}
+
+        {% case "bodyText" %}
+            {% include 'components/body-text' with {
+                heading: block.heading,
+                body: block.body,
+                button: block.button
+            } %}
+
+        {% case "bodyTextWImages" %}
+            {% include 'components/body-text-images' with {
+                heading: block.heading,
+                body: block.body,
+                button: block.button,
+                images: block.images.all()
+            } %}
+
+        {% case "listing" %}
+            {% include 'components/listing' with {
+                formHandle: block.listingToDisplay.handle
+            } %}
+
+        {% case "testimonial" %}
+            {% include 'components/testimonial' with {
+                quote: block.quote,
+                credit: block.credit,
+                image: block.image.one()
+            } %}
+
+        {% case "statistics" %}
+            {% include 'components/stats' with {items: block.statistics} %}
+
+        {% case "centreAlignedPromo" %}
+            {% include 'components/promo-central' with {
+                heading: block.heading,
+                body: block.body,
+                button: block.button,
+                images: block.images.all()
+            } %}
+
+        {% case "leftAlignedPromo" %}
+            {% include 'components/promo-left' with {
+                heading: block.heading,
+                body: block.body,
+                button: block.button
+            } %}
+
+        {% case "latestNews" %}
+            {% include 'components/scroller' %}
+
+    {% endswitch %}
+{% endfor %}

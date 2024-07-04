@@ -1,0 +1,21 @@
+.hamburger {
+    &-line {
+        @apply h-1 w-8 bg-[var(--primary)] block transition-[width] duration-300;
+
+        &__angle {
+            @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 delay-[300ms];
+
+            [data-hamburger=closed] & {
+                @apply w-0 delay-[0ms];
+            }
+        }
+
+        &__flat {
+            @apply delay-[300ms];
+
+            [data-hamburger=open] & {
+                @apply w-0 delay-[0ms];
+            }
+        }
+    }
+}

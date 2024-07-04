@@ -1,0 +1,46 @@
+columnSuffix: vigjofwh
+contentColumnType: string(10)
+fieldGroup: 06b378ff-1d12-4d66-8696-20fb62e7e2cd # Homepage
+handle: tickerLinkSource
+instructions: null
+name: 'Ticker link source'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'No link'
+        -
+          - value
+          - noLink
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Ticket link'
+        -
+          - value
+          - ticketLink
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Custom URL'
+        -
+          - value
+          - customUrl
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

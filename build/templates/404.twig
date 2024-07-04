@@ -1,0 +1,40 @@
+{% extends "layout/_index" %}
+
+{% block content %}
+
+{% set image = conventionDetails.image404.one() %}
+
+<section class="row">
+
+    <span class="not-sr-only absolute bottom-full left-1/2 -translate-x-1/2 uppercase font-display text-[var(--primary)] pb-2 text-sm">Hello, there. 👋</span>
+
+    <div class="h-[calc(100vh-13.5rem)] md:h-[calc(100vh-14.5rem)] relative">
+
+        <div class="absolute text-center w-full z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <h1>404 Error</h1>
+            <div class="w-content mt-6">
+                <p>There's been an error finding this page. <a href="/">Go home</a></p>
+            </div>
+        </div>
+
+        {% if image %}
+            <div class="absolute z-10 top-0 left-0 w-full h-full">
+                <picture>
+                    <source {{ attr({
+                        type: 'image/jpeg',
+                        srcset: image.getSrcset(
+                            [320, 412, 768, 1280, 1440, 1920, 2560],
+                            { format: 'jpg', }
+                        ),
+                        sizes: '100vw',
+                    }) }}>
+                    <img src="{{ image.url() }}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt }}" class="object-cover w-full h-full opacity-20">
+                </picture>
+            </div>
+        {% endif %}
+
+    </div>
+
+</section>
+    
+{% endblock content %}

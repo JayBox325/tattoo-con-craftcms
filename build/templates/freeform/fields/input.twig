@@ -1,0 +1,18 @@
+<fieldset class="">
+    {% include 'freeform/fields/label' with {
+        label: field.label,
+        for: field.hash,
+        instructions: field.instructions,
+    } %}
+
+    <div class="field-wrap">
+        <input
+            id="{{ field.hash }}"
+            type="textField"
+            class="field"
+            required="{{ field.required }}"
+            placeholder="{{ field.placeholder }}"
+        />
+    </div>
+
+</fieldset>

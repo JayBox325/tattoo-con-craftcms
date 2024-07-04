@@ -1,0 +1,274 @@
+dateModified: 1720103026
+elementSources:
+  Solspace\Freeform\Elements\Submission:
+    -
+      key: '*'
+      type: native
+    -
+      heading: Forms
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'form:1'
+      tableAttributes:
+        - 'field:7'
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'form:2'
+      tableAttributes:
+        - 'field:1'
+        - 'field:2'
+        - 'field:25'
+        - status
+      type: native
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:d578307c-7dd7-4eaf-8b5f-b3b6623537f7' # Site
+      tableAttributes:
+        - link
+        - type
+      type: native
+email:
+  fromEmail: $FROM_EMAIL
+  fromName: $FROM_NAME
+  replyToEmail: $REPLY_TO_EMAIL
+  template: null
+  transportSettings:
+    host: smtp.sendgrid.net
+    password: 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
+    port: '465'
+    useAuthentication: '1'
+    username: apikey
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  media:
+    hasUrls: true
+    name: Media
+    settings:
+      path: '@webroot/uploads/media'
+    type: craft\fs\Local
+    url: '@web/uploads/media'
+  mediaTransforms:
+    hasUrls: true
+    name: 'Media Transforms'
+    settings:
+      path: '@webroot/uploads/media/transforms'
+    type: craft\fs\Local
+    url: '@web/uploads/media/transforms'
+meta:
+  __names__:
+    0cc55044-0bcd-4b3d-94cd-c51e1c56f8be: 'Latest News' # Latest News
+    1ffc8b87-4cb0-4389-a7af-96269a9d80ba: 'Form Background Image' # Form Background Image
+    2b7035eb-1445-48d1-84be-f560cb8f0c78: 'Homepage background image' # Homepage background image
+    2c423d0d-bf17-4d17-bb5b-f322f2e0e37b: 'Standard content' # Standard content
+    6ad2b884-1327-465f-9d0c-fed9e8adf54b: Link # Link
+    06b378ff-1d12-4d66-8696-20fb62e7e2cd: Homepage # Homepage
+    7ad29552-2c5b-4143-8ba3-088f8ad10e3b: '404 Background Image' # 404 Background Image
+    7adc3c1d-e03f-40ec-9231-efad21694bb9: 'Colour Theme' # Colour Theme
+    7b8ee11f-3ae3-4656-964e-f7c2369bc9a2: 'Introduction Text' # Introduction Text
+    7df0605f-0733-42a7-8d52-37b1daaf4616: Common # Common
+    8a6db7b0-a224-4e52-b7b9-cc5d078ff7cc: Listing # Listing
+    8cd97955-f9d6-47e3-99ce-195aec5c3737: 'Convention Details' # Convention Details
+    8d4c452f-09c8-4970-8120-aa0e52eb21a7: Body # Body
+    09bd6291-ca7b-4987-a441-186f082d6838: 'Venue Address' # Venue Address
+    9c030c39-3ed9-4187-81bd-8b831bd492a1: 'Centre Aligned Promo' # Centre Aligned Promo
+    10dab528-5a52-42ca-abd0-98cc29054274: 'Body Text w/ Images' # Body Text w/ Images
+    18aa89f5-6478-4473-9908-44d21b4182a4: Testimonial # Testimonial
+    20ecc302-1f90-4041-896e-d6ce8331e1b7: Body # Body
+    27dd8ebc-605c-44c3-b846-c3cfdf001610: Body # Body
+    30c620d8-1ed8-484c-bd01-6848518d8500: 'Body Text' # Body Text
+    32fd394f-6d8d-4011-93c8-fb1412e484d9: Credit # Credit
+    036cd08c-71ee-4249-8a20-3169f4e6e9b3: Default # Default
+    41cd0ad9-2c87-40f4-ab32-4353f4c250ef: Email # Email
+    44c8c628-cb8f-456c-a0fe-e4be9866f4b4: 'Custom ticker URL' # Custom ticker URL
+    86d3e1a3-cb62-4ed1-b469-8e0a10ba842a: 'News Entry' # News Entry
+    89ffef60-abc8-4c11-bd67-e2f736533c87: Homepage # Homepage
+    90e23fea-55cd-4241-b7f4-aff9bdf1a684: 'Left Aligned Promo' # Left Aligned Promo
+    99dfd078-88d3-4e30-968a-5625294a42f1: Dates # Dates
+    335f2a0c-c065-4603-8b43-a8321a530104: Button # Button
+    613d6316-c0dc-4797-9178-d4df71657d07: Heading # Heading
+    636a8196-3745-4098-8db6-08fc4dabe751: Artists # Artists
+    849fb4db-6a84-418f-9946-71f1a9ab7439: 'Poster Image' # Poster Image
+    860ece42-79a2-41ee-97de-09d793091ceb: 'Ticket Link' # Ticket Link
+    932f336c-4a0d-40ce-ab63-e14bdf690929: 'Link Item' # Link Item
+    948aaf6b-4564-40c5-8ae7-16feac4453a5: Button # Button
+    949a7583-26b2-4d3a-a25e-96ee5230e9a5: Form # Form
+    995d49ce-ef17-4772-a54d-f77351126722: News # News
+    5768cc44-498f-4351-9d4c-eb438a0aed6a: Statistics # Statistics
+    6156facd-2360-41d7-abcc-f7aa9cad87ac: 'Tattoo Convention' # Tattoo Convention
+    8680c443-00ed-47fd-9d79-0cfc2bdfc58a: 'Venue Title' # Venue Title
+    09477c56-884a-4fe3-a8d9-5c609efd2f4d: 'Site theme' # Site theme
+    22013a6d-6d26-4501-939b-30dd22cb3b34: Images # Images
+    23163b42-9818-4a9f-a1d1-6e0a6d5d2bee: 'Tattoo Convention' # Tattoo Convention
+    37293b18-81eb-4237-a044-7e0deb884401: 'SEO Page Description' # SEO Page Description
+    0187837d-63dd-4998-9dc8-7a3aee4560e0: 'Ticker Text' # Ticker Text
+    96201267-aaa5-45a6-9f80-018d7aa74f29: Heading # Heading
+    a30e2815-07d4-41b2-a87a-5f6e73acbb3b: Heading # Heading
+    a420f5b8-f512-4b4a-b063-3fd6770219bb: Ticker # Ticker
+    aa1493b7-173b-4c50-9ba1-19789cb0755f: Button # Button
+    ae5245ac-e090-4afa-a97e-ec25015fc025: 'Are tickets available?' # Are tickets available?
+    ae90169e-6b25-46c4-aff6-7c2bc7374bd9: Media # Media
+    b1f6f12d-08e1-462d-a982-d06fe61d1874: 'Homepage background video' # Homepage background video
+    b26d9406-5ab5-49e6-ba02-4f7f7371e8a6: 'Listing to display' # Listing to display
+    bfebea4c-5483-4a88-8d54-df7aefe89f37: 'Header Links' # Header Links
+    c1fa9a94-88de-41db-88fb-d461a31abcbc: Body # Body
+    c8b355b2-2784-4819-81c0-861e80710982: 'Convention Details' # Convention Details
+    c456abcf-7c7f-4794-b242-c4f160284a79: Image # Image
+    cafb0ab3-0919-4520-8118-46a65a8c56c4: 'Instagram URL' # Instagram URL
+    cd5e3e65-bc0e-4478-9edb-016f85dd56db: Button # Button
+    cff9800a-3539-46a4-b20d-5fa697e11e6e: 'Footer Info Links' # Footer Info Links
+    d1d5ea8e-022b-4110-83d7-d06c0c3829ea: 'Page Components' # Page Components
+    d1dc4e4a-8e51-4a50-b618-a934d131494b: 'Select a form' # Select a form
+    d9cf0b4b-81e5-47e7-afd6-04017176df56: 'Standard Content' # Standard Content
+    d578307c-7dd7-4eaf-8b5f-b3b6623537f7: Site # Site
+    dd7dbb09-69d0-4cfe-abc6-6e5d37588fde: Heading # Heading
+    decf9d8d-7ad9-439c-8a9a-b193a6bb3b2b: Link # Link
+    e35be100-b4b8-4df1-80d1-9f3ec1309dca: 'Event logo' # Event logo
+    e47e814d-7c90-4607-83d4-44e1ed07b8c1: Quote # Quote
+    ec6c68de-998b-4cae-900f-c6e3b731abe0: 'Big Introduction Text' # Big Introduction Text
+    efa2451e-509c-44fa-80a6-ae22bff37b54: Statistics # Statistics
+    f4c87143-196c-4a3c-9554-20a1d42cb035: Heading # Heading
+    f4ce80d9-06d3-4895-9461-496c6f367d02: Images # Images
+    fa8328e5-2612-4e0c-880f-2f03d2319dc1: 'Info Link' # Info Link
+    fad740f0-cb57-4c22-b969-94f85e462830: 'Ticker link source' # Ticker link source
+plugins:
+  copy-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  freeform:
+    edition: pro
+    enabled: true
+    licenseKey: V79AAPIF3PI6TAE9482IHO6W
+    schemaVersion: 5.2.2
+    settings:
+      ajaxByDefault: true
+      alertNotificationRecipients: null
+      allowFileTemplateEdit: '1'
+      autoScroll: true
+      autoScrollToErrors: true
+      badgeType: all
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: 1
+      clientDigestRecipients: null
+      customErrorMessage: null
+      customHoneypotName: null
+      defaultTemplates: true
+      defaultView: dashboard
+      digestFrequency: 1
+      digestOnlyOnProduction: false
+      digestRecipients: null
+      displayFeed: true
+      emailTemplateDefault: files
+      emailTemplateDirectory: freeform/emails
+      emailTemplateStorageType: files_database
+      exportHandlesAsNames: false
+      exportLabels: false
+      fieldDisplayOrder: name
+      fillWithGet: false
+      footerScripts: false
+      formFieldShowOnlyAllowedForms: false
+      formSubmitDisable: true
+      formSubmitExpiration: null
+      formTemplateDirectory: freeform
+      formattingTemplate: basic-light.twig
+      freeformHoneypot: true
+      freeformHoneypotEnhancement: false
+      hideBannerDemo: false
+      hideBannerOldFreeform: false
+      minimumSubmitTime: null
+      pluginName: null
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: null
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      recaptchaBehaviour: display_error
+      recaptchaEnabled: false
+      recaptchaErrorMessage: 'Please verify that you are not a robot.'
+      recaptchaKey: null
+      recaptchaLazyLoad: false
+      recaptchaMinScore: 0.5
+      recaptchaSecret: null
+      recaptchaSize: normal
+      recaptchaTheme: light
+      recaptchaType: v2_checkbox
+      rememberPageSubmitOrder: true
+      removeNewlines: false
+      renderFormHtmlInCpViews: true
+      salesforce_client_id: null
+      salesforce_client_secret: null
+      salesforce_password: null
+      salesforce_username: null
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
+      scriptInsertLocation: footer
+      scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      showTutorial: false
+      spamFolderEnabled: true
+      spamProtectionBehaviour: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+      successTemplateDirectory: null
+      twigInHtml: true
+      twigInHtmlIsolatedMode: true
+      updateSearchIndexes: true
+  quick-field:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Tattoo Convention'
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

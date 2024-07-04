@@ -1,0 +1,6 @@
+[data-menu=closed] {
+    @apply hidden;
+}
+[data-menu=open] {
+    @apply block;
+}

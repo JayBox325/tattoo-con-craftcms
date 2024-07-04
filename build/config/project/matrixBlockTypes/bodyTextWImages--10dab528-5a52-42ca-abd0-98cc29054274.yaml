@@ -1,0 +1,213 @@
+field: d1d5ea8e-022b-4110-83d7-d06c0c3829ea # Page Components
+fieldLayouts:
+  1fba2dfa-c331-4a96-b3c9-c7c281953a1a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 613d6316-c0dc-4797-9178-d4df71657d07 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9476c358-fe41-44f7-9b28-be44b2da4375
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 27dd8ebc-605c-44c3-b846-c3cfdf001610 # Body
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c7973a90-0c70-41aa-a79e-4df95923a228
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f4ce80d9-06d3-4895-9461-496c6f367d02 # Images
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 626aff67-ceee-49f6-99af-a3ddb268bd68
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aa1493b7-173b-4c50-9ba1-19789cb0755f # Button
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 148f4d29-3594-4a01-8248-64c971cc7381
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1776891c-9afd-4057-b91e-06d1bad8988a
+        userCondition: null
+fields:
+  27dd8ebc-605c-44c3-b846-c3cfdf001610: # Body
+    columnSuffix: xomuyldv
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: null
+    name: Body
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  613d6316-c0dc-4797-9178-d4df71657d07: # Heading
+    columnSuffix: agxsumvp
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  aa1493b7-173b-4c50-9ba1-19789cb0755f: # Button
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: button
+    instructions: null
+    name: Button
+    searchable: false
+    settings:
+      allowCustomText: true
+      allowTarget: true
+      autoNoReferrer: true
+      customTextMaxLength: 0
+      customTextRequired: false
+      defaultLinkName: asset
+      defaultText: ''
+      enableAllLinkTypes: false
+      enableAriaLabel: false
+      enableElementCache: false
+      enableTitle: false
+      typeSettings:
+        asset:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        category:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+        custom:
+          allowAliases: false
+          disableValidation: false
+          enabled: true
+        email:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        entry:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: true
+          sources:
+            - 'section:995d49ce-ef17-4772-a54d-f77351126722' # News
+            - 'section:d578307c-7dd7-4eaf-8b5f-b3b6623537f7' # Site
+        site:
+          enabled: false
+          sites: '*'
+        tel:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        url:
+          allowAliases: false
+          disableValidation: false
+          enabled: false
+        user:
+          allowCrossSiteLink: false
+          allowCustomQuery: false
+          enabled: false
+          sources: '*'
+    translationKeyFormat: null
+    translationMethod: none
+    type: lenz\linkfield\fields\LinkField
+  f4ce80d9-06d3-4895-9461-496c6f367d02: # Images
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: 'Up to three images. It''s best to match the image count to the height of text they are accompanying. E.g. 1-2 short paragraphs is just one image, 3-4 paragraphs is two images, or more is three images. But it''s best to add them and see how they look on the front-end.'
+    name: Images
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:ae90169e-6b25-46c4-aff6-7c2bc7374bd9' # Media
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 3
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ae90169e-6b25-46c4-aff6-7c2bc7374bd9' # Media
+      restrictedLocationSubpath: null
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: bodyTextWImages
+name: 'Body Text w/ Images'
+sortOrder: 2

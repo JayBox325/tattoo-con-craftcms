@@ -1,0 +1,27 @@
+columnSuffix: zzlljvxj
+contentColumnType: text
+fieldGroup: 7df0605f-0733-42a7-8d52-37b1daaf4616 # Common
+handle: introductionText
+instructions: null
+name: 'Introduction Text'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: null
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

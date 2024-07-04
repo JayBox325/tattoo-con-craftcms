@@ -1,0 +1,88 @@
+fieldLayouts:
+  a0573e05-b2e4-459e-87bd-cd12888e8b26:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 2e1800c5-56e8-4306-be20-21de9b3ffc0f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f4c87143-196c-4a3c-9554-20a1d42cb035 # Heading
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa057f27-94e5-40f2-ac14-1d8b101f34c7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1d5ea8e-022b-4110-83d7-d06c0c3829ea # Page Components
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae46e120-dce3-4557-84cb-3458e0b4fea3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0c5bf2c2-26af-4d79-9faf-8e42c1bd8c2e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 37293b18-81eb-4237-a044-7e0deb884401 # SEO Page Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 170ca4c1-54ba-489b-9e8c-97d7e7e481ba
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 3262c0b5-d58f-4180-9293-3c1919eb3572
+        userCondition: null
+handle: standardContent
+hasTitleField: true
+name: 'Standard content'
+section: d578307c-7dd7-4eaf-8b5f-b3b6623537f7 # Site
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

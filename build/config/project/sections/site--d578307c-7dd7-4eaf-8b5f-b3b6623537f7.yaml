@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: site
+name: Site
+propagationMethod: all
+siteSettings:
+  23163b42-9818-4a9f-a1d1-6e0a6d5d2bee: # Tattoo Convention
+    enabledByDefault: true
+    hasUrls: true
+    template: site/_index
+    uriFormat: '{parentUri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 15000f43-d203-4464-b59e-6fae7e29af31
+type: structure

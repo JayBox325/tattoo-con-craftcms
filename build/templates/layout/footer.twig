@@ -1,0 +1,86 @@
+{% include 'components/ticker' %}
+    
+<footer class="md:border-b-4 border-[var(--primary)]">
+    <div class="py-6 lg:py-12">
+        <p class="text-[var(--primary)] uppercase text-center leading-[0.9]">
+            <span class="font-condensed block text-[12vw] sm:text-[9vw] xl:text-[10vw]">{{ conventionDetails.heading }}</span>
+        </p>
+    </div>
+
+    <div class="grid grid-cols-6 md:grid-cols-12 lg:divide-y-0 lg:divide-x-4 divide-[var(--primary)] xl:grid-cols-24 border-t-4 border-[var(--primary)] p-6 gap-6 md:p-8 md:gap-y-10 lg:gap-0 lg:p-0">
+
+        <div class="col-span-6 sm:col-span-3 md:col-span-6 lg:col-span-3 xl:col-span-6">
+            {% include 'components/footer-list' with {
+                heading: 'Info',
+                isMatrix: true,
+                items: conventionDetails.footerInfoLinks
+            } %}
+        </div>
+    
+        <div class="col-span-6 sm:col-span-3 md:col-span-6 lg:col-span-3 xl:col-span-6">
+            {% include 'components/footer-list' with {
+                heading: 'Venue',
+                address: conventionDetails.venueAddress|nl2br
+            } %}
+        </div>
+
+        <div class="col-span-6 sm:col-span-3 md:col-span-6 lg:col-span-3 xl:col-span-6">
+            {% include 'components/footer-list' with {
+                heading: 'Group',
+                isMatrix: false,
+                items: [
+                    {
+                        text: 'Brighton Tattoo Convention',
+                        target: '_blank',
+                        url: 'https://brightontattoo.com/'
+                    },
+                    {
+                        text: 'Bristol Tattoo Convention',
+                        target: '_blank',
+                        url: 'https://bristoltattooconvention.com'
+                    },
+                    {
+                        text: 'Tattoo Expo UK',
+                        target: '_blank',
+                        url: 'https://thetattooexpo.co.uk'
+                    },
+                ]
+            } %}
+        </div>
+    
+        <div class="col-span-6 sm:col-span-3 md:col-span-6 lg:col-span-3 xl:col-span-6">
+            {% include 'components/footer-list' with {
+                heading: 'Connect',
+                isMatrix: false,
+                items: [
+                    {
+                        text: 'Tickets',
+                        target: '_blank',
+                        url: conventionDetails.areTicketsAvailable ? conventionDetails.ticketLink : ''
+                    },
+                    {
+                        text: 'Instagram',
+                        target: '_blank',
+                        url: conventionDetails.instagram
+                    },
+                    {
+                        text: 'Email',
+                        target: '_blank',
+                        url: conventionDetails.email ? 'mailto:' ~ conventionDetails.email : ''
+                    }
+                ]
+            } %}
+        </div>
+
+    </div>
+
+    <div class="border-t-4 border-[var(--primary)] flex flex-col lg:flex-row items-center justify-center p-6 text-center xl:p-12 gap-4">
+        <p>&copy; {{ 'now' | date('Y') }} {{ conventionDetails.heading }}.</p>
+        <p class="flex flex-row gap-4">
+            <a href="/terms" class="underline underline-offset-4">Terms</a>
+            <a href="/privacy" class="underline underline-offset-4">Privacy</a>
+            <a href="https://jaycollett.co" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">Site Credits</a>
+        </p>
+    </div>
+
+</footer>

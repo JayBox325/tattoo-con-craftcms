@@ -1,0 +1,48 @@
+<header class="fixed h-16 md:h-20 bg-black top-4 left-4 right-4 lg:top-8 lg:left-8 lg:right-8 z-50 flex items-center justify-between pl-2 sm:pl-3 md:pl-4 border-4 border-[var(--primary)]">
+    <div class="">
+        <a href="/" class="font-condensed text-[var(--primary)] block uppercase leading-[0.9] w-36 text-[1.5rem] sm:w-40 md:w-auto md:text-4xl lg:text-5xl">{{ conventionDetails.heading }}</a>
+    </div>
+
+    <div class="h-full flex flex-row items-center divide-x-4 divide-[var(--primary)]">
+
+        <p class="text-right title-6 text-base pr-2 md:pr-4 sm:text-lg lg:text-2xl">
+            {{ conventionDetails.venueTitle }}<br />
+            {{ conventionDetails.dates }}
+        </p>
+
+        {% if conventionDetails.areTicketsAvailable %}
+            <a href="{{ conventionDetails.ticketLink }}" target="_blank" class="hidden lg:flex h-full text-white border-0 btn bg-highlight"rel="noopener noreferrer">Buy tickets</a>
+        {% endif %}
+
+        <button data-hamburger='closed' class="h-full relative w-16 md:w-20 flex flex-col py-3 md:py-5 items-center justify-around">
+            <span class="sr-only">Toggle menu</span>
+            <span class="hamburger-line hamburger-line__flat"></span>
+            <span class="hamburger-line hamburger-line__flat"></span>
+            <span class="hamburger-line hamburger-line__flat"></span>
+
+            <span class="hamburger-line hamburger-line__angle rotate-45"></span>
+            <span class="hamburger-line hamburger-line__angle -rotate-45"></span>
+        </button>
+
+    </div>
+</header>
+
+<nav data-menu='closed' class="fixed top-20 md:top-24 lg:top-28 z-[999] right-4 lg:right-8 border-4 border-t-0 bg-black py-3 border-[var(--primary)] w-52 md:w-60 lg:w-72 max-w-sm">
+    <ul class="flex flex-col gap-2 text-lg md:text-xl text-[var(--primary)] text-left uppercase font-display items-center {% if not conventionDetails.areTicketsAvailable %}mr-6 lg:mr-8{% endif %}">
+        {% for item in conventionDetails.headerLinks %}
+            <li class="px-4 w-full">
+                <a href="{{ item.infoLink.url }}" class="inline-block leading-none text-sm sm:text-base">{{ item.infoLink.text }}</a>
+            </li>
+        {% endfor %}
+
+        <li class="px-4 w-full">
+            <a href="/news" class="inline-block leading-none text-sm sm:text-base">Latest News</a>
+        </li>
+
+        {% if conventionDetails.areTicketsAvailable %}
+            <li class="-mb-3 w-full lg:hidden">
+                <a href="{{ conventionDetails.ticketLink }}" target="_blank" rel="noopener noreferrer" class="h-18 text-white border-t-4 border-[var(--primary)] bg-highlight-500 flex items-center justify-center px-6 uppercase hover:bg-highlight-600 transition-colors">Buy Tickets</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>

@@ -1,0 +1,86 @@
+field: d1d5ea8e-022b-4110-83d7-d06c0c3829ea # Page Components
+fieldLayouts:
+  702db23a-39f3-4e06-a852-e3761a9f9b39:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: efa2451e-509c-44fa-80a6-ae22bff37b54 # Statistics
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b9e4545d-3b01-4b73-9323-5c30341e84e0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 427c3cbb-4ca6-445b-93e2-37b2eed2680f
+        userCondition: null
+fields:
+  efa2451e-509c-44fa-80a6-ae22bff37b54: # Statistics
+    columnSuffix: abjkpejs
+    contentColumnType: text
+    fieldGroup: null
+    handle: statistics
+    instructions: 'Requires 2 or 3 statistics for this to work.'
+    name: Statistics
+    searchable: false
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Value
+                -
+                  - handle
+                  - value
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - number
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Label
+                -
+                  - handle
+                  - label
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: 3
+      minRows: 2
+      staticRows: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+handle: statistics
+name: Statistics
+sortOrder: 7

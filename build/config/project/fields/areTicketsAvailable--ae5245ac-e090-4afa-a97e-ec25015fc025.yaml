@@ -1,0 +1,14 @@
+columnSuffix: rubhfcxv
+contentColumnType: boolean
+fieldGroup: 7df0605f-0733-42a7-8d52-37b1daaf4616 # Common
+handle: areTicketsAvailable
+instructions: null
+name: 'Are tickets available?'
+searchable: false
+settings:
+  default: false
+  offLabel: 'No'
+  onLabel: 'Yes'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

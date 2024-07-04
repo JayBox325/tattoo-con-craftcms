@@ -1,0 +1,6 @@
+{% block content %}
+
+    {% include 'components/hero-page' with {title: entry.heading ?? entry.title} %}
+    {% include 'components/page-components' with {components: entry.pageComponents.all() } %}
+    
+{% endblock content %}

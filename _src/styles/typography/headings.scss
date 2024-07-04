@@ -1,0 +1,33 @@
+h1, .title-1,
+h2, .title-2,
+h3, .title-3,
+h4, .title-4,
+h5, .title-5,
+h6, .title-6 {
+    @apply font-black font-condensed text-[var(--primary)] leading-condensed uppercase;
+    text-wrap: balance;
+}
+
+h1, .title-1 {
+    @apply font-display text-4xl lg:text-6xl xl:text-8xl;
+}
+
+h2, .title-2 {
+    @apply text-4xl xl:text-6xl;
+}
+
+h3, .title-3 {
+    @apply text-3xl xl:text-5xl;
+}
+
+h4, .title-4 {
+    @apply text-3xl xl:text-4xl;
+}
+
+h5, .title-5 {
+    @apply text-4xl;
+}
+
+h6, .title-6 {
+    @apply text-4xl;
+}

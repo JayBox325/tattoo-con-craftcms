@@ -1,0 +1,28 @@
+// Tailwind
+@tailwind base;
+
+// Core
+@import '_core/**/*';
+
+// Libraries
+@import 'infinite-marquee/assets/css/infinite-marquee';
+
+// Base
+@import 'base/**/*';
+
+// Typography
+@import 'typography/**/*';
+
+// Layout
+@import 'layout/**/*';
+
+// Components
+@import 'components/**/*';
+
+// Form
+@import 'form/**/*';
+
+// Elements
+@import 'elements/**/*';
+
+// @tailwind utilities;

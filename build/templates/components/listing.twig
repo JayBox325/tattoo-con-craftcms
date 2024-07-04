@@ -1,0 +1,163 @@
+{% import '_macros/macros' as macro %}
+
+{% set form = craft.freeform.form(formHandle) %}
+
+{% if form.description == 'Artists' %}
+    {% set sortOrder = 'alias ASC' %}
+{% elseif form.description == 'Traders' %}
+    {% set sortOrder = 'tradingName ASC' %}
+{% endif %}
+
+{% paginate craft.freeform.submissions({
+    form: formHandle,
+    limit: 12,
+    status: ["yes"],
+    orderBy: sortOrder
+}) as pageInfo, submissions %}
+
+{# - TODO
+- Update filters so traders filter by trading name, artists by alias name
+- Update trader images #}
+
+<section class="row">
+
+    <ul class="divide-y-4 divide-[var(--primary)]">
+
+        {% for submission in submissions %}
+
+            {% set instagramUrl = '' %}
+            
+            {% if submission.instagram|length %}
+                {# Normalize the input by removing potential protocol and domain parts #}
+                {% set instagram = submission.instagram|replace({'https://instagram.com/': '', 'http://instagram.com/': '', 'instagram.com/': '', '@': ''}) %}
+
+                {# Prepend the normalized Instagram handle with the full URL #}
+                {% set instagramUrl = 'https://instagram.com/' ~ instagram %}
+            {% endif %}
+
+            {% set workImageId = submission.workImage.value[0] %}
+            {% set workImage = craft.assets.id(workImageId).one() %}
+            {# {% set workImage = workImageId ? craft.assets.id(workImageId).one() : null %} #}
+
+            <li class="relative group group lg:hover:bg-[var(--primary)] before:w-full before:h-[calc(100%+4px)] before:top-[-4px] before:left-0 before:absolute" tabindex="0">
+
+                <div class="block w-full lg:p-6">
+                    <div class="grid auto-rows-auto grid-cols-6 gap-y-3 lg:gap-2 lg:grid-cols-12 relative z-10 items-center text-left lg:auto-rows-[unset]">
+
+                        <div class="col-span-4 order-1 lg:order-1 lg:col-span-6">
+                            <span class="title-1 pt-6 md:pt-10 lg:p-0 px-6 lg:group-hover:text-black lg:pt-[1px] block text-2xl">
+                                {% if submission.alias %}
+                                    {{ submission.alias }}
+                                {% elseif submission.tradingName %}
+                                    {{ submission.tradingName }}
+                                {% else %}
+                                    {{ submission.firstName }} {{ submission.lastName }}
+                                {% endif %}
+                            </span>
+                        </div>
+
+                        {% if submission.studioName %}
+                            <div class="col-span-4 px-6 lg:p-0 order-3 xl:col-span-5 lg:order-2">
+                                <span class="title-2 lg:group-hover:text-black block text-3xl">{{ submission.studioName }}</span>
+                            </div>
+                        {% endif %}
+
+                        {% if instagram|length %}
+                            <div class="col-span-4 px-6 pb-6 md:pb-10 lg:p-0 order-4 lg:col-span-2 xl:col-span-1 lg:col-start-11 xl:col-start-12 lg:order-3 relative z-30 group-hover:text-black text-right">
+                                <ul class="flex flex-row lg:justify-end gap-2 xl:gap-3 title-6">
+                                    {% if instagramUrl|length %}
+                                        <li>
+                                            <a href="{{ instagramUrl }}" target="_blank" rel="noopener noreferrer">
+                                                <span class="sr-only">Instagram</span>
+                                                {{ macro.icon('social-instagram', 'lg:group-hover:text-black w-8 h-8 inline-block') }}
+                                            </a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        {% endif %}
+
+                        <div class="col-span-2 h-full border-l-4 border-[var(--primary)] row-span-3 order-2 relative before:content-[''] before:pb-1/2 lg:row-span-[unset] lg:absolute lg:left-3/4 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 lg:w-72 lg:h-auto lg:z-[99999999] lg:border-4 lg:hidden lg:group-hover:block">
+                            
+                            {% if workImageId %}
+                                <picture>
+                                    <source {{ attr({
+                                        type: 'image/jpg',
+                                        srcset: workImage.getSrcset(
+                                            [320, 412, 768],
+                                            { format: 'jpg', }
+                                        ),
+                                        sizes: '30vw',
+                                    }) }}>
+                                    <img src="{{ workImage.url() }}" width="{{ workImage.width }}" height="{{ workImage.height }}" alt="{{ workImage.alt }}" class="top-0 left-0 absolute object-cover h-full w-full lg:static lg:w-auto lg:h-auto lg:object-[unset]">
+                                </picture>
+                            {% endif %}
+
+                                {# {% if submission.country|length %}
+                                    <div class="hidden border-t-4 border-[var(--primary)]">
+                                        <span class="block text-white text-left title-4 p-6 text-2xl">{{ submission.country }}</span>
+                                    </div>
+                                {% endif %} #}
+                            </div>
+                    
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+
+    </ul>
+
+    {% if pageInfo.totalPages > 1 %}
+
+        <div class="border-t-4 border-[var(--primary)] text-[var(--primary)] font-display text-xl flex flex-row items-center uppercase xl:text-2xl divide-x-4 divide-[var(--primary)]">
+
+            <div class="flex-initial">
+                {% if pageInfo.prevUrl %}
+                    <a class="hover:underline w-12 h-12 md:w-16 md:h-16 lg:w-48 xl:h-20 flex items-center justify-center" href="{{ pageInfo.prevUrl }}">
+                        <span class="sr-only lg:not-sr-only">Previous</span>
+                        <span class="lg:hidden">&larr;</span>
+                    </a>
+                {% else %}
+                    <span class="w-12 h-12 md:w-16 md:h-16 lg:w-48 xl:h-20 flex items-center justify-center opacity-50">
+                        <span class="sr-only lg:not-sr-only">Previous</span>
+                        <span class="lg:hidden">&larr;</span>
+                    </span>
+                {% endif %}
+            </div>
+
+            <div class="flex h-12 md:h-16 xl:h-20 flex-auto items-center justify-center text-center space-x-2 xl:space-x-4">
+                {% for page, url in pageInfo.getPrevUrls(3) %}
+                    <div>
+                        <a class="hover:underline flex items-center justify-center" href="{{ url }}">{{ page }}</a>
+                    </div>
+                {% endfor %}
+
+                <div>
+                    <span class="block text-highlight">{{ pageInfo.currentPage }}</span>
+                </div>
+
+                {% for page, url in pageInfo.getNextUrls(3) %}
+                    <div>
+                        <a class="hover:underline flex items-center justify-center" href="{{ url }}">{{ page }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="flex-initial">
+                {% if pageInfo.nextUrl %}
+                    <a class="hover:underline w-12 h-12 md:w-16 md:h-16 lg:w-48 xl:h-20 flex items-center justify-center" href="{{ pageInfo.nextUrl }}">
+                        <span class="sr-only lg:not-sr-only">Next</span>
+                        <span class="lg:hidden">&rarr;</span>
+                    </a>
+                {% else %}
+                    <span class="w-12 h-12 md:w-16 md:h-16 lg:w-48 xl:h-20 flex items-center justify-center opacity-50">
+                        <span class="sr-only lg:not-sr-only">Next</span>
+                        <span class="lg:hidden">&rarr;</span>
+                    </span>
+                {% endif %}
+            </div>
+
+        </div>
+
+    {% endif %}
+</section>

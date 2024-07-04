@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 7df0605f-0733-42a7-8d52-37b1daaf4616 # Common
+handle: headerLinks
+instructions: null
+name: 'Header Links'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_headerlinks}}'
+  maxBlocks: 6
+  minBlocks: 1
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

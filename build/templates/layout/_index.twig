@@ -1,0 +1,80 @@
+{% set stamp = '55345345' %}
+
+<!doctype html>
+<html lang="en">
+
+{% if craft.app.request.getSegment(1) == 'news' %}
+    {% set pageTitle = 'News' %}
+{% else %}
+    {% set pageTitle = entry.title %}
+{% endif %}
+
+    <head>
+
+        {# SEO #}
+        <title>{{ conventionDetails.heading }} | {{ pageTitle }}</title>
+        <meta name="description" content="{{ entry.seoPageDescription }}"/>
+        <link rel="canonical" href="{{ entry.url }}" />
+
+        {# Meta #}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        {# Styles #}
+        <link rel="stylesheet" href="/assets/styles/styles.css?version={{ stamp }}">
+        <link rel="stylesheet" href="/assets/styles/utilities.css?version={{ stamp }}">
+
+        {# Scripts #}
+        <script src="/assets/scripts/bundle-min.js?version={{ stamp }}"></script>
+        
+        {# Fonts #}
+        <link rel="stylesheet" href="https://use.typekit.net/xrl0mlx.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bowlby+One&display=swap">
+
+        {# Favicons #}
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#d23701">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#ffffff">
+
+        <style>
+        :root {
+            --primary: {{ conventionDetails.colourTheme }};
+            }
+        </style>
+
+    </head>
+
+    <body class="relative md:p-4 lg:p-8">
+
+        <div class="hidden md:block pointer-events-none border-4 z-[90] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-[var(--primary)] overflow-hidden w-[calc(100%-2rem)] h-[calc(100vh-2rem)] lg:w-[calc(100%-4rem)] lg:h-[calc(100vh-4rem)]">
+        </div>
+
+        <div class="hidden md:block pointer-events-none border-[1rem] lg:border-[2rem] z-50 fixed top-0 left-0 border-black overflow-hidden w-full h-full">
+        </div>
+
+        {% if entry.type != 'form' %}
+            {% include 'layout/header.twig' %}
+        {% endif %}
+        
+        <main class="{% if entry.type != 'form' %}md:pt-20 {% endif %} relative z-20 md:px-1">
+            {# {% include 'layout/grid-overlay' %} #}
+            {% block content %}{% endblock content %}
+            {% if entry.type != 'form' %}
+                {% include 'layout/footer.twig' %}
+            {% endif %}
+        </main>
+
+        {# SVG Symbols #}
+        <div class="hidden">
+            {% include '_includes/svg-symbols' %}
+        </div>
+
+        <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+    </body>
+
+
+</html>

@@ -1,0 +1,14 @@
+<section class="row">
+    <div class="grid grid-cols-1 divide-[var(--primary)] divide-y-4 md:grid-cols-3 md:divide-x-4 md:divide-y-0">
+
+        {% for item in items %}
+            <div class="col-span-1 p-6 sm:py-8 md:py-12 lg:py-20">
+                <p class="text-center flex flex-col gap-2 xl:gap-4 lg:w-2/3 lg:mx-auto">
+                    <span class="title-1 text-white">{{ item.value }}</span>
+                    <span class="title-3">{{ item.label }}</span>
+                </p>
+            </div>
+        {% endfor %}
+
+    </div>
+</section>

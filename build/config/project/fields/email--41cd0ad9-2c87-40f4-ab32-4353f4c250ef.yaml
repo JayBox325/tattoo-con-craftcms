@@ -1,0 +1,19 @@
+columnSuffix: vcdddwlr
+contentColumnType: text
+fieldGroup: 7df0605f-0733-42a7-8d52-37b1daaf4616 # Common
+handle: email
+instructions: 'The full email for users to contact you.'
+name: Email
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

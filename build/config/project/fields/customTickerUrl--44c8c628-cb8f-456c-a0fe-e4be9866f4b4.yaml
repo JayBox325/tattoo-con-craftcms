@@ -1,0 +1,63 @@
+columnSuffix: ewyrbgns
+contentColumnType: string
+fieldGroup: 7df0605f-0733-42a7-8d52-37b1daaf4616 # Common
+handle: customTickerUrl
+instructions: null
+name: 'Custom ticker URL'
+searchable: false
+settings:
+  allowCustomText: false
+  allowTarget: false
+  autoNoReferrer: false
+  customTextMaxLength: 0
+  customTextRequired: false
+  defaultLinkName: entry
+  defaultText: ''
+  enableAllLinkTypes: false
+  enableAriaLabel: false
+  enableElementCache: false
+  enableTitle: false
+  typeSettings:
+    asset:
+      allowCrossSiteLink: false
+      allowCustomQuery: false
+      enabled: false
+      sources: '*'
+    category:
+      allowCrossSiteLink: false
+      allowCustomQuery: false
+      enabled: false
+      sources: '*'
+    custom:
+      allowAliases: false
+      disableValidation: false
+      enabled: false
+    email:
+      allowAliases: false
+      disableValidation: false
+      enabled: true
+    entry:
+      allowCrossSiteLink: false
+      allowCustomQuery: false
+      enabled: true
+      sources:
+        - 'section:d578307c-7dd7-4eaf-8b5f-b3b6623537f7' # Site
+    site:
+      enabled: false
+      sites: '*'
+    tel:
+      allowAliases: false
+      disableValidation: false
+      enabled: false
+    url:
+      allowAliases: false
+      disableValidation: false
+      enabled: true
+    user:
+      allowCrossSiteLink: false
+      allowCustomQuery: false
+      enabled: false
+      sources: '*'
+translationKeyFormat: null
+translationMethod: none
+type: lenz\linkfield\fields\LinkField

@@ -1,0 +1,47 @@
+fieldLayouts:
+  df1c7270-2741-4684-b321-6843b7d3fa8d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6d147324-5fff-4bd6-9eed-a0b7ce828c5f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0d98919d-f89a-4c71-b097-a1c97a9e273b
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 636a8196-3745-4098-8db6-08fc4dabe751 # Artists
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

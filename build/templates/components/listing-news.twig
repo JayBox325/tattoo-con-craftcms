@@ -1,0 +1,78 @@
+{% import '_macros/macros' as macro %}
+
+{% set newsQuery = craft.entries()
+  .section('news')
+  .orderBy('postDate DESC') %}
+
+{% paginate newsQuery as pageInfo, posts %}
+
+<section class="row -mt-1">
+
+    <div class="hidden sm:block lg:left-1/3 2xl:left-1/4 absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-[var(--primary)]"></div>
+    <div class="hidden lg:block 2xl:left-1/2 absolute top-0 left-2/3 -translate-x-1/2 w-1 h-full bg-[var(--primary)]"></div>
+    <div class="hidden 2xl:block absolute top-0 left-3/4 -translate-x-1/2 w-1 h-full bg-[var(--primary)]"></div>
+
+    <ul class="grid grid-cols-6 md:grid-cols-12">
+
+        {% for post in posts %}
+            <li class="col-span-6 sm:col-span-3 md:col-span-6 lg:col-span-4 2xl:col-span-3 border-y-4 border-[var(--primary)] -mb-1">
+                {% include 'components/scroller-item' with {item: post} %}
+            </li>
+        {% endfor %}
+
+    </ul>
+
+    {% if pageInfo.totalPages > 1 %}
+
+        <div class="border-t-4 border-[var(--primary)] text-[var(--primary)] font-display text-xl flex flex-row items-center uppercase xl:text-2xl divide-x-4 divide-[var(--primary)]">
+
+            <div class="flex-initial">
+                {% if pageInfo.prevUrl %}
+                    <a class="hover:underline w-12 h-12 md:w-16 md:h-16 lg:w-48 xl:h-20 flex items-center justify-center" href="{{ pageInfo.prevUrl }}">
+                        <span class="sr-only lg:not-sr-only">Previous</span>
+                        <span class="lg:hidden">&larr;</span>
+                    </a>
+                {% else %}
+                    <span class="w-12 h-12 md:w-16 md:h-16 lg:w-48 xl:h-20 flex items-center justify-center opacity-50">
+                        <span class="sr-only lg:not-sr-only">Previous</span>
+                        <span class="lg:hidden">&larr;</span>
+                    </span>
+                {% endif %}
+            </div>
+
+            <div class="flex h-12 md:h-16 xl:h-20 flex-auto items-center justify-center text-center space-x-2 xl:space-x-4">
+                {% for page, url in pageInfo.getPrevUrls(3) %}
+                    <div>
+                        <a class="hover:underline flex items-center justify-center" href="{{ url }}">{{ page }}</a>
+                    </div>
+                {% endfor %}
+
+                <div>
+                    <span class="block text-highlight">{{ pageInfo.currentPage }}</span>
+                </div>
+
+                {% for page, url in pageInfo.getNextUrls(3) %}
+                    <div>
+                        <a class="hover:underline flex items-center justify-center" href="{{ url }}">{{ page }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="flex-initial">
+                {% if pageInfo.nextUrl %}
+                    <a class="hover:underline w-12 h-12 md:w-16 md:h-16 lg:w-48 xl:h-20 flex items-center justify-center" href="{{ pageInfo.nextUrl }}">
+                        <span class="sr-only lg:not-sr-only">Next</span>
+                        <span class="lg:hidden">&rarr;</span>
+                    </a>
+                {% else %}
+                    <span class="w-12 h-12 md:w-16 md:h-16 lg:w-48 xl:h-20 flex items-center justify-center opacity-50">
+                        <span class="sr-only lg:not-sr-only">Next</span>
+                        <span class="lg:hidden">&rarr;</span>
+                    </span>
+                {% endif %}
+            </div>
+
+        </div>
+
+    {% endif %}
+</section>

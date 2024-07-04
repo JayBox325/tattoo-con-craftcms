@@ -1,0 +1,11 @@
+{% extends "layout/_index" %}
+
+{% block content %}
+
+    {% include 'components/hero-news' with {
+        title: entry.heading ?? entry.title,
+        body: entry.introductionText
+    } %}
+    {% include 'components/page-components' with {components: entry.pageComponents.all() } %}
+    
+{% endblock content %}

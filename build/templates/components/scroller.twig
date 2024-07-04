@@ -1,0 +1,30 @@
+{% set newsEntries = craft.entries().section('news').orderBy('postDate DESC').limit(6) %}
+
+
+{% if newsEntries|length > 2 %}
+    <section class="row">
+        <div class="flex flex-row divide-x-4 divide-[var(--primary)]">
+            
+            <div class="flex-initial w-1/4 sm:w-1/6 lg:w-2/12 xl:w-3/24 2xl:w-2/24">
+                <div class="relative h-full w-full">
+                    <div class="relative h-full w-full">
+                        <h2 class="title-1 xl:text-7xl absolute top-1/2 origin-center left-1/2 -translate-x-1/2 -translate-y-1/2 text-center -rotate-90">News</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-auto w-3/4 sm:w-5/6 lg:w-10/12 xl:w-21/24 2xl:w-22/24">
+                <div class="relative h-full z-10 flex flex-row w-full overflow-x-auto scroller">
+                    <div data-scroller="{{ newsEntries|length }}" class="grid divide-x-4 divide-[var(--primary)]">
+
+                        {% for item in newsEntries %}
+                            {% include 'components/scroller-item' with {item: item} %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+{% endif %}

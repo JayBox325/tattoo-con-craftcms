@@ -1,0 +1,12 @@
+field: d1d5ea8e-022b-4110-83d7-d06c0c3829ea # Page Components
+fieldLayouts:
+  b5e3000e-87f2-4fce-abe2-9ca13b70bd3f:
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: 6711a1b8-d163-4a7d-883c-f853b7d9883c
+        userCondition: null
+handle: latestNews
+name: 'Latest News'
+sortOrder: 9

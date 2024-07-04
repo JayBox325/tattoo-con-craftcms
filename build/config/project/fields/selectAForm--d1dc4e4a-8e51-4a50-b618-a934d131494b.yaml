@@ -1,0 +1,10 @@
+columnSuffix: tmmoilba
+contentColumnType: integer
+fieldGroup: 7df0605f-0733-42a7-8d52-37b1daaf4616 # Common
+handle: selectAForm
+instructions: 'Select the form this page requires.'
+name: 'Select a form'
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: Solspace\Freeform\FieldTypes\FormFieldType

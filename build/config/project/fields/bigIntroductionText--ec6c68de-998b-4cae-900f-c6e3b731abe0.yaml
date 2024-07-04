@@ -1,0 +1,19 @@
+columnSuffix: ydkympry
+contentColumnType: text
+fieldGroup: 06b378ff-1d12-4d66-8696-20fb62e7e2cd # Homepage
+handle: bigIntroductionText
+instructions: 'Warning: This has lots of formatting requirements so please use this cautiously as line breaks are important to keep line lengths attractive on the front-end. Also, this text features an SVG graphic within the text, use a "~" character to indicate where this graphic should appear.'
+name: 'Big Introduction Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

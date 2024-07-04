@@ -1,0 +1,35 @@
+columnSuffix: mmodwfgr
+contentColumnType: string(11)
+fieldGroup: 7df0605f-0733-42a7-8d52-37b1daaf4616 # Common
+handle: siteTheme
+instructions: null
+name: 'Site theme'
+searchable: false
+settings:
+  columnType: null
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Yellow & Black'
+        -
+          - value
+          - yellowBlack
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'White & Black'
+        -
+          - value
+          - whiteBlack
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

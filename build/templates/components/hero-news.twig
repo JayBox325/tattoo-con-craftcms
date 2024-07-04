@@ -1,0 +1,12 @@
+<section class="row pt-20 md:pt-0">
+    <div class="container">
+        <div class="py-6 xl:py-12 text-center">
+            <a href="/news" class="relative z-20 underline underline-offset-4 mb-4 cursor-pointer text-sm inline-block">&larr; Back to all news</a>
+            <h1 class="relative z-10 text-center title-1">{{ title }}</h1>
+            <div class="mt-6 max-w-xl xl:max-w-3xl w-content mx-auto text-center">
+                {{ body }}
+                <p>{{ entry.postDate | date("M d, Y") }}</p>
+            </div>
+        </div>
+    </div>
+</section>

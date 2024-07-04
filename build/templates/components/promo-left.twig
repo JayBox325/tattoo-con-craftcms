@@ -1,0 +1,24 @@
+{% import '_macros/macros' as macro %}
+
+<section class="row py-8 sm:py-12 md:py-14 lg:py-20 xl:py-32">
+    <div class="container">
+
+        <div class="flex flex-col gap-4 md:gap-6 lg:gap-8 xl:gap-12 relative">
+            <h2 class="title-1 md:text-6xl lg:text-8xl xl:text-10xl xl:max-w-6xl">{{ heading }}</h2>
+            <div class="w-content w-content--lg max-w-lg xl:max-w-2xl">
+                {{ body }}
+            </div>
+
+            {% if button.url %}
+                <div class=" mt-6 md:mt-8 lg:mt-10">
+                    <a href="{{ button.url }}" {% if button.target == "_blank" %}target="_blank" rel="noopener noreferrer"{% endif %} class="btn">{{ button.text }}</a>
+                </div>
+            {% endif %}
+
+            <div class="absolute bottom-0 right-5/24 z-[999] translate-y-1/4 xl:-translate-y-7/12 2xl:-translate-y-8/12 xl:top-8/12">
+                {{ macro.icon('star-black', 'w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-44 xl:h-44 inline-block text-red-500') }}
+            </div>
+        </div>
+
+    </div>
+</section>

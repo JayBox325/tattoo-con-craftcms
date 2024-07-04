@@ -1,0 +1,148 @@
+fieldLayouts:
+  9753a6d6-b2b9-4744-a551-470d27f1abb0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3f69586f-a6cf-4df4-91c2-32519871dda3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8680c443-00ed-47fd-9d79-0cfc2bdfc58a # Venue Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b6e70a69-93c7-49c2-9e05-8c6e23e01096
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 99dfd078-88d3-4e30-968a-5625294a42f1 # Dates
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5caa6571-ef54-471a-909b-7b4125e2f352
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ec6c68de-998b-4cae-900f-c6e3b731abe0 # Big Introduction Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9c296055-fc45-4a76-b7fc-ca7198e45387
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 64c635b4-a575-4d5b-95a0-39e416d26ae6
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2b7035eb-1445-48d1-84be-f560cb8f0c78 # Homepage background image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea0606d7-e45f-4fd4-bf4a-5033cb7dea67
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b1f6f12d-08e1-462d-a982-d06fe61d1874 # Homepage background video
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 11dc87b3-2e0c-42dc-9a36-68d391191bd0
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Hero assets'
+        uid: 1e8c0b6e-da63-4cdf-9d14-ce82adb1e305
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d1d5ea8e-022b-4110-83d7-d06c0c3829ea # Page Components
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 881e1b5c-efda-45c9-8b65-aa60ef6dce35
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Page Components'
+        uid: ae31f583-e5ee-45b9-adf3-3f73439e8261
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 37293b18-81eb-4237-a044-7e0deb884401 # SEO Page Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4da98cf6-a6a0-47ff-af9a-88e0d921057e
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 2ff5ede2-1962-4396-a4ea-bbee0b842d90
+        userCondition: null
+handle: homepage
+hasTitleField: true
+name: Homepage
+section: d578307c-7dd7-4eaf-8b5f-b3b6623537f7 # Site
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 3
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

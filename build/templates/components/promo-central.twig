@@ -1,0 +1,40 @@
+{% import '_macros/macros' as macro %}
+
+{% set rotations = ['rotate-[4deg]', '-rotate-[8deg] -translate-y-12 z-[20]', 'rotate-[6deg]'] %}
+
+<section class="row py-8 sm:py-12 md:py-14 lg:py-20 xl:py-32">
+    <div class="container">
+
+        <div class="text-center flex flex-col gap-4 md:gap-6 lg:gap-8 xl:gap-12">
+            <h2 class="title-1 max-w-xl mx-auto md:text-6xl lg:text-8xl xl:text-10xl xl:max-w-4xl">{{ heading }}</h2>
+            <div class="w-content w-content--lg max-w-lg xl:max-w-xl mx-auto">
+                {{ body}}
+            </div>
+        </div>
+
+        <div class="relative flex flex-row mx-auto w-11/12 justify-between my-8 pt-8 xl:mt-24 max-w-lg lg:max-w-2xl xl:max-w-3xl">
+
+            {% if images|length %}
+                <div class="absolute -top-2 right-5/24 z-[999] xl:-top-6">
+                    {{ macro.icon('star-black', 'w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20 inline-block text-red-500') }}
+                </div>
+
+                <div class="absolute -bottom-2 left-5/24 z-[999] xl:-bottom-4">
+                    {{ macro.icon('star-black', 'w-12 h-12 md:w-16 md:h-16 xl:w-20 xl:h-20 rotate-12 inline-block text-red-500') }}
+                </div>
+
+                {% for image in images %}
+                    <div class="aspect-square relative w-full -mx-3 {{ rotations[loop.index - 1]}}">
+                        <img src="{{ image.url() }}" alt="{{ image.alt }}" width="{{ image.width }}" height="{{ image.height }}" class="absolute top-0 left-0 w-full h-full object-cover">
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            {% if button.url %}
+                <a href="{{ button.url }}" {% if button.target == "_blank" %}target="_blank" rel="noopener noreferrer"{% endif %} class="btn absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[999]">{{ button.text }}</a>
+            {% endif %}
+
+        </div>
+
+    </div>
+</section>

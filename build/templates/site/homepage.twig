@@ -1,0 +1,6 @@
+{% block content %}
+
+    {% include 'components/hero-home' with { entry: entry } %}
+    {% include 'components/page-components' with {components: entry.pageComponents} %}
+    
+{% endblock content %}

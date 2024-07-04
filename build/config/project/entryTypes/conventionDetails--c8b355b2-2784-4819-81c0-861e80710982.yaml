@@ -1,0 +1,285 @@
+fieldLayouts:
+  cbb5713a-3b48-449c-b328-9b68a28be2ff:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: __blank__
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ac236e15-7a4f-4d58-ae62-3e87f7c359d7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f4c87143-196c-4a3c-9554-20a1d42cb035 # Heading
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4cb7657-1ada-4b8e-b2c7-84ee0de1ac1d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7adc3c1d-e03f-40ec-9231-efad21694bb9 # Colour Theme
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ac853b6-9066-4c04-b708-d2570df2206c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e35be100-b4b8-4df1-80d1-9f3ec1309dca # Event logo
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3411b54-8239-4efb-b44e-fd73ca64fe55
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8680c443-00ed-47fd-9d79-0cfc2bdfc58a # Venue Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 653171fa-f16e-42d1-b9ef-53a18dab01b8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 99dfd078-88d3-4e30-968a-5625294a42f1 # Dates
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f094539-d493-49c4-b98f-d3698686645c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 09bd6291-ca7b-4987-a441-186f082d6838 # Venue Address
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b3da0bc1-32b1-409b-9aee-a2898bd25935
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cafb0ab3-0919-4520-8118-46a65a8c56c4 # Instagram URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb871513-c6d3-4c53-8cb8-f88583bbb0c1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 41cd0ad9-2c87-40f4-ab32-4353f4c250ef # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b7dc3e44-a934-4fbf-b2b4-d7f959e09743
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 36a241f1-f2be-4c04-addd-531ebf0b0572
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: cff9800a-3539-46a4-b20d-5fa697e11e6e # Footer Info Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d73ea2c-46d3-4810-855d-58ff1ff6f47f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bfebea4c-5483-4a88-8d54-df7aefe89f37 # Header Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a62810d7-6177-47c9-a45e-396091e36af1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Navigation
+        uid: 4102c408-5470-4f0a-848a-aa5009fd8d42
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: ae5245ac-e090-4afa-a97e-ec25015fc025 # Are tickets available?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 37af577f-5e31-4836-8127-025c81036715
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 860ece42-79a2-41ee-97de-09d793091ceb # Ticket Link
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6d663f0c-09ae-43ed-85e2-27c297c98044
+            userCondition: null
+            warning: null
+            width: 100
+        name: Tickets
+        uid: c4764a1b-786e-488c-9802-a29a62c6c5fd
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 849fb4db-6a84-418f-9946-71f1a9ab7439 # Poster Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 53d77abf-a134-4b5c-9ef7-2a9c68493bed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7ad29552-2c5b-4143-8ba3-088f8ad10e3b # 404 Background Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b23fed0-9ad8-4102-a825-ef35ebeb7d03
+            userCondition: null
+            warning: null
+            width: 100
+        name: Media
+        uid: bf4208d0-701c-4c5c-ac91-6d7384a92408
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0187837d-63dd-4998-9dc8-7a3aee4560e0 # Ticker Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9f635114-6129-4d4c-9071-773c00c68655
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fad740f0-cb57-4c22-b969-94f85e462830 # Ticker link source
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2bcd4bc0-e856-40fc-bd99-c0a4c5265026
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: fad740f0-cb57-4c22-b969-94f85e462830 # Ticker link source
+                  operator: in
+                  uid: 1f807903-86c8-497e-a44b-9197dd4432fc
+                  values:
+                    - customUrl
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 44c8c628-cb8f-456c-a0fe-e4be9866f4b4 # Custom ticker URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d90d213b-e3f3-427e-ac03-fcc8fb0a74bb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Ticker
+        uid: 6590b523-f121-4692-a502-b180d3283d0a
+        userCondition: null
+handle: conventionDetails
+hasTitleField: false
+name: 'Convention Details'
+section: 8cd97955-f9d6-47e3-99ce-195aec5c3737 # Convention Details
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

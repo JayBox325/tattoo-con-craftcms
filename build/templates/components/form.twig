@@ -1,0 +1,8 @@
+{% set formHandle = '2024ArtistsApplication' %}
+{% set form = craft.freeform.form(formHandle) %}
+
+<h1>This is the form template</h1>
+
+{{ form.render({
+    submissionToken: submissionToken|default(null)
+}) }}

@@ -1,0 +1,67 @@
+{% import '_macros/macros' as macro %}
+
+{% if conventionDetails.tickerText %}
+
+    <section
+        class="row overflow-hidden bg-highlight"
+    >
+
+        {% set url = null %}
+
+        {% if conventionDetails.tickerLinkSource != 'noLink' %}
+            {% if conventionDetails.tickerLinkSource == 'ticketLink' and conventionDetails.ticketLink %}
+                {% set url = conventionDetails.ticketLink %}
+            {% elseif conventionDetails.tickerLinkSource == 'customUrl' %}
+                {% set url = conventionDetails.customTickerUrl %}
+            {% endif %}
+        {% endif %}
+
+        {% if url %}
+            <a href="{{ url }}" class="no-sr-only" target="_blank" rel="noopener noreferrer">
+        {% endif %}
+
+            <div
+                class="flex not-sr-only flex-row gap-6 flex-nowrap whitespace-nowrap overflow-hidden"
+            >
+                <p class="ticker pb-3 pt-4 md:pb-4 md:pt-5 xl:pb-5 lg:pt-6 xl:pb-6 xl:pt-8 title-1 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white">
+
+                    <span>{{ conventionDetails.tickerText }}</span>
+                    {% if 'Bristol' in conventionDetails.heading %}
+                        {{ macro.icon('star-black', 'w-8 h-8 inline-block text-black') }}
+                    {% else %}
+                        <span class="text-black">•</span>
+                    {% endif %}
+
+                    <span aria-hidden>{{ conventionDetails.tickerText }}</span>
+                    {% if 'Bristol' in conventionDetails.heading %}
+                        {{ macro.icon('star-black', 'w-8 h-8 inline-block text-black') }}
+                    {% else %}
+                        <span class="text-black">•</span>
+                    {% endif %}
+
+                </p>
+                <p aria-hidden class="ticker pb-3 pt-4 md:pb-4 md:pt-5 xl:pb-5 lg:pt-6 xl:pb-6 xl:pt-8 title-1 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white">
+                    <span>{{ conventionDetails.tickerText }}</span>
+                    {% if 'Bristol' in conventionDetails.heading %}
+                        {{ macro.icon('star-black', 'w-8 h-8 inline-block text-black') }}
+                    {% else %}
+                        <span class="text-black">•</span>
+                    {% endif %}
+
+                    <span>{{ conventionDetails.tickerText }}</span>
+                    {% if 'Bristol' in conventionDetails.heading %}
+                        {{ macro.icon('star-black', 'w-8 h-8 inline-block text-black') }}
+                    {% else %}
+                        <span class="text-black">•</span>
+                    {% endif %}
+                </p>
+            </div>
+
+        {% if url %}
+            </a>
+            <a href="{{ url }}" target="_blank" rel="noopener noreferrer" class="sr-only">{{ conventionDetails.tickerText }}</a>
+        {% endif %}
+
+    </section>
+
+{% endif %}

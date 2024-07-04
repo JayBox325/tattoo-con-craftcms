@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: conventionDetails
+name: 'Convention Details'
+propagationMethod: all
+siteSettings:
+  23163b42-9818-4a9f-a1d1-6e0a6d5d2bee: # Tattoo Convention
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

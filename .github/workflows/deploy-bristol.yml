@@ -1,0 +1,61 @@
+name: Deploy to Fortrabbit production
+on:
+  pull_request:
+    branches:	
+      - deploy/production
+  push:
+    branches:	
+      - deploy/production
+
+jobs:
+  deploy:
+
+    env:
+      GIT_EMAIL: hello@jaycollett.co
+      GIT_USERNAME: JayBox325
+      REPO_URL: bristoltattoo@deploy.eu2.frbit.com:bristoltattoo.git
+      
+    runs-on: ubuntu-latest    
+
+    steps:
+
+      - name: Checkout to current pipeline
+        uses: actions/checkout@v3
+
+      - name: Enable SSH Access
+        uses: webfactory/ssh-agent@v0.6.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Init Fortrabbit git repo
+        run: |
+          rm -Rf .git
+          git init
+          git remote add origin $REPO_URL
+          git branch -l
+
+      - name: Configure Git
+        run: |
+          git config user.email $GIT_EMAIL
+          git config user.name $GIT_USERNAME
+
+      - name: Move /build to root
+        run: |
+          cp -a build/. .
+          rm -Rf build _src _gulp _db
+          rm .babelrc gulpfile.babel.js .nvmrc .gitignore package.json package-lock.json
+        
+      - name: Commit everything (with new built assets)
+        # You can also specifically "git add public/your/path"
+        run: |
+          git add .
+          git commit -m "Build $($CURRENT_DATE_TIME)"
+        env:
+          CURRENT_DATE_TIME: "date +%Y-%m-%d:%H-%M"
+
+      - name: deploy
+        run: |
+          git push -f origin master
+        env:
+          # This avoids a failure when the client does not know the SSH Host already
+          GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"

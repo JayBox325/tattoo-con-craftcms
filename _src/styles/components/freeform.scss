@@ -1,0 +1,11 @@
+.ff-errors {
+    @apply text-xs text-red-500 leading-none absolute top-full left-0 pt-1;
+}
+
+.ff-has-errors {
+    @apply border-red-500 #{!important};
+}
+
+textarea {
+    form-sizing: content;
+}

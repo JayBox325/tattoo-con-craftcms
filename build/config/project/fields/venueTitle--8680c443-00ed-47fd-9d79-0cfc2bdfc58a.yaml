@@ -1,0 +1,19 @@
+columnSuffix: bqomzkij
+contentColumnType: text
+fieldGroup: 06b378ff-1d12-4d66-8696-20fb62e7e2cd # Homepage
+handle: venueTitle
+instructions: 'The name of the venue to be displayed on the homepage.'
+name: 'Venue Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

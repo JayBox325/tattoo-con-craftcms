@@ -1,0 +1,49 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 06b378ff-1d12-4d66-8696-20fb62e7e2cd # Homepage
+handle: homepageBackgroundImage
+instructions: null
+name: 'Homepage background image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:ae90169e-6b25-46c4-aff6-7c2bc7374bd9' # Media
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:ae90169e-6b25-46c4-aff6-7c2bc7374bd9' # Media
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+  selectionLabel: null
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:ae90169e-6b25-46c4-aff6-7c2bc7374bd9' # Media
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

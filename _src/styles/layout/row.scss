@@ -1,0 +1,7 @@
+.row {
+    @apply relative border-b-4 border-[var(--primary)];
+
+    [data-freeform] & {
+        @apply border-0;
+    }
+}

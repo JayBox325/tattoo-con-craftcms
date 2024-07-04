@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: news
+name: News
+propagationMethod: all
+siteSettings:
+  23163b42-9818-4a9f-a1d1-6e0a6d5d2bee: # Tattoo Convention
+    enabledByDefault: true
+    hasUrls: true
+    template: news/entry
+    uriFormat: 'news/{slug}'
+type: channel

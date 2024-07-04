@@ -1,0 +1,19 @@
+columnSuffix: yfhrfvnb
+contentColumnType: text
+fieldGroup: 06b378ff-1d12-4d66-8696-20fb62e7e2cd # Homepage
+handle: dates
+instructions: 'Short event dates e.g. 6 - 7 July 2024'
+name: Dates
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
