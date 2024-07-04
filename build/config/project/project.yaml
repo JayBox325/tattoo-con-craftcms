@@ -1,4 +1,4 @@
-dateModified: 1720103026
+dateModified: 1720105888
 elementSources:
   Solspace\Freeform\Elements\Submission:
     -
@@ -55,7 +55,7 @@ email:
   template: null
   transportSettings:
     host: smtp.sendgrid.net
-    password: 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
+    password: $SENDGRID_PASSWORD
     port: '465'
     useAuthentication: '1'
     username: apikey
